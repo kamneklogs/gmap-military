@@ -28,14 +28,23 @@ namespace gmap_military
         {
             if (filterOptionsCB.SelectedItem.Equals("Categórico"))
             {
-                msgLabel.Text = "Seleccione de la lista la categoria que desea";
+                //Niveles educativos (preescolar, básica y media) 
+                msgLabel.Text = "Seleccione el nivel educativo por el que desea filtrar los datos";
                 categoryCB.Enabled = true;
 
             } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
-            {
+            {   //Municipios
+
+                msgLabel.Text = "Escriba el municipio por el que desea filtrar los datos";
+                stringTB.Enabled = true;
 
             } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
             {
+                //Código región
+
+                msgLabel.Text = "Escriba el rango de códigos de los departamento por los que desea filtrar los datos";
+                fromUD.Enabled = true;
+                toUD.Enabled = true;
 
             }
         }
