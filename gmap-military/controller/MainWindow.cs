@@ -21,8 +21,23 @@ namespace gmap_military
             InitializeComponent();
             manager = new Manager();
             manager.loadData();
-            MessageBox.Show("Exito");
 
+        }
+
+        private void filterOptionsCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (filterOptionsCB.SelectedItem.Equals("Categórico"))
+            {
+                msgLabel.Text = "Seleccione de la lista la categoria que desea";
+                categoryCB.Enabled = true;
+
+            } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
+            {
+
+            } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
+            {
+
+            }
         }
     }
 }
