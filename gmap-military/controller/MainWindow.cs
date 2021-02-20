@@ -1,5 +1,6 @@
 ﻿using gmap_military.model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,25 @@ namespace gmap_military
         {
             InitializeComponent();
             manager = new Manager();
-            manager.loadData();
+    
+            //manager.loadData();
+
+        }
+
+        public void configurateCategoryCB()
+        {
+            ArrayList msg = manager.configurateCategory();
+            string[] agregados = new string[1000];
+            for (int i = 0; i < msg.Count; i++)
+            {
+                 
+                for(int j = 0; j < agregados.Length; i++)
+                {
+                   
+                }
+            }
+            
+            categoryCB.Items.Add("");
 
         }
 
@@ -28,25 +47,35 @@ namespace gmap_military
         {
             if (filterOptionsCB.SelectedItem.Equals("Categórico"))
             {
-                //Niveles educativos (preescolar, básica y media) 
-                msgLabel.Text = "Seleccione el nivel educativo por el que desea filtrar los datos";
+                //Zona
+                msgLabel.Text = "Seleccione el tipo de zona por el que desea filtrar los datos";
                 categoryCB.Enabled = true;
-
-            } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
-            {   //Municipios
-
-                msgLabel.Text = "Escriba el municipio por el que desea filtrar los datos";
-                stringTB.Enabled = true;
-
-            } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
-            {
-                //Código región
-
-                msgLabel.Text = "Escriba el rango de códigos de los departamento por los que desea filtrar los datos";
+                stringTB.Enabled = false;
                 fromUD.Enabled = true;
                 toUD.Enabled = true;
 
+            } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
+            {   //Ciudades
+
+                msgLabel.Text = "Escriba la ciudad por la que desea filtrar los datos";
+                stringTB.Enabled = true;
+                categoryCB.Enabled = true;
+                fromUD.Enabled = true;
+                toUD.Enabled = true;
+
+            } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
+            {
+                //Número zona
+
+                msgLabel.Text = "Escriba el rango de las zonas por las que desea filtrar los datos";
+                fromUD.Enabled = true;
+                toUD.Enabled = true;
+                categoryCB.Enabled = true;
+                stringTB.Enabled = false;
+
             }
         }
+
+        
     }
 }
