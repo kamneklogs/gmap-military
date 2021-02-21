@@ -13,14 +13,14 @@ namespace gmap_military.model
 {
     class Manager
     {
-        const string path = "..\\data\\dataset.csv";
+        private string path;
         private System.Data.DataTable table;
 
-        private ICollection<MilitaryBase> militaryBases;
+        private List<MilitaryBase> militaryBases;
 
         public Manager()
         {
-
+            militaryBases = new List<MilitaryBase>();
         }
 
         public ArrayList configurateCategory()
@@ -40,7 +40,7 @@ namespace gmap_military.model
 
                     if (data.Length > 0)
                     {
-                        msg.Add(data[4]);
+                        msg.Add(data[3]);
                             
                             System.Data.DataRow row = table.NewRow();
                             for (int j = 0; j < data.Length; j++)
@@ -66,45 +66,36 @@ namespace gmap_military.model
             return msg;
         }
 
-        public bool loadData()
+        public void loadData()
         {
-
-            bool success = false;
-            militaryBases = new List<MilitaryBase>();
-
-            string[] temp = null;
-            MilitaryBase baseTemp = null;
-            try
+              OpenFileDialog openFileDialog = new OpenFileDialog();
+                
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var sr = new StreamReader(path);
-                string s = sr.ReadLine();
-                s = sr.ReadLine();
-                while (s != null)
+                int index = 0;
+
+                try
                 {
+                    path = openFileDialog.FileName;
 
-                    temp = s.Split(',');
-                    //ZONA 0,ZONA -DIM 1,DIRECCION 2,CIUDAD 3,TELEFONO 4,LOCATION 5
-                    baseTemp = new MilitaryBase(temp[2], temp[3], temp[4], temp[5]);
-                    militaryBases.Add(baseTemp);
+                    var sr = new StreamReader(path);
 
+                    string s = sr.ReadLine();
                     s = sr.ReadLine();
-                }
-                sr.Close();
-                success = true;
+                    string[] temp = null;
+                    while (s != null)
+                    {
+                        temp = s.Split(',');
+                        militaryBases.Add(new MilitaryBase(temp[2],temp[3],temp[4],temp[5].Substring(2,temp[5].Length) + temp[6].Substring(0, temp[6].Length-2)));
+                        s = sr.ReadLine();
+                    }
+                    sr.Close();
+                }catch(Exception){
 
+                }      
+                
             }
-            catch (Exception)
-            {
-
-                success = false;
-
-                MessageBox.Show("Ocurrio un error");
-                throw;
-            }
-
-
-
-            return success;
+        
         }
 
 

@@ -1,6 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\gmap-military",
+    "\\gmap-military\\controller",
+    "\\gmap-military\\data",
+    "\\gmap-military\\model",
+    "\\gmap-military\\Properties",
+    "\\gmap-military\\view"
   ],
+  "SelectedNode": "\\gmap-military\\controller\\MainWindow.cs",
   "PreviewInSolutionExplorer": false
 }

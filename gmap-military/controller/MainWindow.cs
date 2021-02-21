@@ -22,7 +22,7 @@ namespace gmap_military
             InitializeComponent();
             manager = new Manager();
     
-            //manager.loadData();
+            manager.loadData();
 
         }
 
