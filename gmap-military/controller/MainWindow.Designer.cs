@@ -47,6 +47,7 @@ namespace gmap_military
             this.label2 = new System.Windows.Forms.Label();
             this.desdeTB = new System.Windows.Forms.TextBox();
             this.hastaTB = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.table)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,7 +179,7 @@ namespace gmap_military
             // 
             // mapViewB
             // 
-            this.mapViewB.Location = new System.Drawing.Point(600, 914);
+            this.mapViewB.Location = new System.Drawing.Point(451, 914);
             this.mapViewB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mapViewB.Name = "mapViewB";
             this.mapViewB.Size = new System.Drawing.Size(280, 58);
@@ -245,11 +246,21 @@ namespace gmap_military
             this.hastaTB.TabIndex = 15;
             this.hastaTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hastaTB_KeyPress);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(793, 914);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(239, 59);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Ver gráficos";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1505, 985);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.hastaTB);
             this.Controls.Add(this.desdeTB);
             this.Controls.Add(this.label2);
@@ -290,6 +301,7 @@ namespace gmap_military
         private System.Windows.Forms.DataGridViewTextBoxColumn cityTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationTC;
+        private System.Windows.Forms.Button button1;
     }
 }
 
