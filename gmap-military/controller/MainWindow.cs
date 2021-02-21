@@ -86,6 +86,7 @@ namespace gmap_military
                 hastaTB.Enabled = false;
                 filterB.Enabled = false;
 
+
             } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
             {   //Ciudades
 
@@ -102,7 +103,6 @@ namespace gmap_military
             else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
             {
                 //Número zona
-
                 msgLabel.Text = "Escriba el rango de las zonas por las que desea filtrar los datos";
                 desdeTB.Enabled = true;
                 hastaTB.Enabled = true;
