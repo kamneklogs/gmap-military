@@ -21,13 +21,23 @@ namespace gmap_military
         {
             InitializeComponent();
             manager = new Manager();
+            manager.loadData();
+
+            Console.WriteLine(manager.militaryBases.Count);
 
             int index = 0;
             for (int i = 0; i < manager.militaryBases.Count; i++)
             {
 
+                index = table.Rows.Add();
+                MilitaryBase temp = manager.militaryBases.ElementAt(i);
+                //   dataTownGridRecord.Rows[index].Cells[0].Value = temp[0];
+                table.Rows[index].Cells[0].Value = temp.address;
+                table.Rows[index].Cells[1].Value = temp.city;
+                table.Rows[index].Cells[2].Value = temp.phone;
+                table.Rows[index].Cells[3].Value = "("+temp.location + ")";
+
             }
-            manager.loadData();
 
         }
 

@@ -16,7 +16,7 @@ namespace gmap_military.model
         private string path;
         private System.Data.DataTable table;
 
-        public List<MilitaryBase> militaryBases {  get; }
+        public List<MilitaryBase> militaryBases { get; }
 
         public Manager()
         {
@@ -41,22 +41,22 @@ namespace gmap_military.model
                     if (data.Length > 0)
                     {
                         msg.Add(data[3]);
-                            
-                            System.Data.DataRow row = table.NewRow();
-                            for (int j = 0; j < data.Length; j++)
-                            {
-                                try
-                                {
-                                    row[j] = data[j];
-                                }
-                                catch (Exception e)
-                                {
-                                    Console.WriteLine("WARNING");
-                                }
-                            }
 
-                            table.Rows.Add(row);
-                        
+                        System.Data.DataRow row = table.NewRow();
+                        for (int j = 0; j < data.Length; j++)
+                        {
+                            try
+                            {
+                                row[j] = data[j];
+                            }
+                            catch (Exception e)
+                            {
+                                Console.WriteLine("WARNING");
+                            }
+                        }
+
+                        table.Rows.Add(row);
+
                     }
 
 
@@ -68,11 +68,10 @@ namespace gmap_military.model
 
         public void loadData()
         {
-              OpenFileDialog openFileDialog = new OpenFileDialog();
-                
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                int index = 0;
 
                 try
                 {
@@ -83,19 +82,29 @@ namespace gmap_military.model
                     string s = sr.ReadLine();
                     s = sr.ReadLine();
                     string[] temp = null;
+
                     while (s != null)
                     {
                         temp = s.Split(',');
-                        militaryBases.Add(new MilitaryBase(temp[2],temp[3],temp[4],temp[5].Substring(2,temp[5].Length) + temp[6].Substring(0, temp[6].Length-2)));
+
+                        string address = temp[2];
+                        string city = temp[3];
+                        string phone = temp[4];
+                        string location = temp[5].Substring(1, temp[5].Length - 1) + temp[6].Substring(1, temp[6].Length - 1);
+
+                        militaryBases.Add(new MilitaryBase(address, city, phone, location));
+
                         s = sr.ReadLine();
                     }
                     sr.Close();
-                }catch(Exception){
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error en la carga de los datos");
+                }
 
-                }      
-                
             }
-        
+
         }
 
 
