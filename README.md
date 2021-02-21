@@ -10,7 +10,7 @@ The languague used in this program is C#
 - Engineering method click
 - Functional requirements click HERE
 - Class diagrama click HERE
-- Object diagrama click [HERE](/docs/ObjectsDiagram.pdf)
+- Object diagrama click [HERE](gmap-military/docs/ObjectsDiagram.pdf)
 
 # Demo
 
