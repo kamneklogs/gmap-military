@@ -14,9 +14,16 @@ namespace gmap_military.controller
 {
     public partial class MapView : Form
     {
-        public MapView()
+
+        public DataGridViewRowCollection rows { get; }
+
+        public MapView(DataGridViewRowCollection rows)
         {
             InitializeComponent();
+
+            this.rows = rows;
+
+
         }
 
         private void backToMainView(object sender, EventArgs e)
@@ -30,6 +37,9 @@ namespace gmap_military.controller
             GMaps.Instance.Mode = AccessMode.ServerOnly;
 
             mainMap.Position = new PointLatLng( 4.6097100,-74.0817500);
+
+            //Aqui carga puntos
+
         }
     }
 }

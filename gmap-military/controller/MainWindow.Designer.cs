@@ -68,23 +68,23 @@ namespace gmap_military
             this.cityTC,
             this.phoneTC,
             this.locationTC});
-            this.table.Location = new System.Drawing.Point(36, 261);
-            this.table.Margin = new System.Windows.Forms.Padding(4);
+            this.table.Location = new System.Drawing.Point(18, 136);
+            this.table.Margin = new System.Windows.Forms.Padding(2);
             this.table.Name = "table";
             this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 82;
             this.table.RowTemplate.Height = 33;
-            this.table.Size = new System.Drawing.Size(1349, 635);
+            this.table.Size = new System.Drawing.Size(888, 340);
             this.table.TabIndex = 0;
             this.table.TabStop = false;
             // 
             // numeroZona
             // 
+            this.numeroZona.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.numeroZona.HeaderText = "Número Zona";
             this.numeroZona.MinimumWidth = 10;
             this.numeroZona.Name = "numeroZona";
             this.numeroZona.ReadOnly = true;
-            this.numeroZona.Width = 200;
             // 
             // zona
             // 
@@ -101,7 +101,7 @@ namespace gmap_military
             this.addressTC.MinimumWidth = 10;
             this.addressTC.Name = "addressTC";
             this.addressTC.ReadOnly = true;
-            this.addressTC.Width = 147;
+            this.addressTC.Width = 77;
             // 
             // cityTC
             // 
@@ -110,7 +110,7 @@ namespace gmap_military
             this.cityTC.MinimumWidth = 10;
             this.cityTC.Name = "cityTC";
             this.cityTC.ReadOnly = true;
-            this.cityTC.Width = 125;
+            this.cityTC.Width = 65;
             // 
             // phoneTC
             // 
@@ -119,7 +119,7 @@ namespace gmap_military
             this.phoneTC.MinimumWidth = 10;
             this.phoneTC.Name = "phoneTC";
             this.phoneTC.ReadOnly = true;
-            this.phoneTC.Width = 141;
+            this.phoneTC.Width = 74;
             // 
             // locationTC
             // 
@@ -128,15 +128,15 @@ namespace gmap_military
             this.locationTC.MinimumWidth = 10;
             this.locationTC.Name = "locationTC";
             this.locationTC.ReadOnly = true;
-            this.locationTC.Width = 152;
+            this.locationTC.Width = 80;
             // 
             // filterB
             // 
             this.filterB.Enabled = false;
-            this.filterB.Location = new System.Drawing.Point(1287, 113);
-            this.filterB.Margin = new System.Windows.Forms.Padding(4);
+            this.filterB.Location = new System.Drawing.Point(644, 59);
+            this.filterB.Margin = new System.Windows.Forms.Padding(2);
             this.filterB.Name = "filterB";
-            this.filterB.Size = new System.Drawing.Size(116, 52);
+            this.filterB.Size = new System.Drawing.Size(58, 27);
             this.filterB.TabIndex = 1;
             this.filterB.Text = "Filtrar";
             this.filterB.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@ namespace gmap_military
             this.msgLabel.Location = new System.Drawing.Point(471, 22);
             this.msgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.msgLabel.Name = "msgLabel";
-            this.msgLabel.Size = new System.Drawing.Size(388, 25);
+            this.msgLabel.Size = new System.Drawing.Size(191, 13);
             this.msgLabel.TabIndex = 2;
             this.msgLabel.Text = "Seleccione como desea filtrar los datos";
             // 
@@ -159,29 +159,29 @@ namespace gmap_military
             "Categórico",
             "Cadena",
             "Numérico"});
-            this.filterOptionsCB.Location = new System.Drawing.Point(36, 124);
-            this.filterOptionsCB.Margin = new System.Windows.Forms.Padding(4);
+            this.filterOptionsCB.Location = new System.Drawing.Point(18, 64);
+            this.filterOptionsCB.Margin = new System.Windows.Forms.Padding(2);
             this.filterOptionsCB.Name = "filterOptionsCB";
-            this.filterOptionsCB.Size = new System.Drawing.Size(318, 33);
+            this.filterOptionsCB.Size = new System.Drawing.Size(161, 21);
             this.filterOptionsCB.TabIndex = 3;
             this.filterOptionsCB.SelectedIndexChanged += new System.EventHandler(this.filterOptionsCB_SelectedIndexChanged);
             // 
             // stringTB
             // 
             this.stringTB.Enabled = false;
-            this.stringTB.Location = new System.Drawing.Point(854, 123);
-            this.stringTB.Margin = new System.Windows.Forms.Padding(4);
+            this.stringTB.Location = new System.Drawing.Point(427, 64);
+            this.stringTB.Margin = new System.Windows.Forms.Padding(2);
             this.stringTB.Name = "stringTB";
-            this.stringTB.Size = new System.Drawing.Size(360, 31);
+            this.stringTB.Size = new System.Drawing.Size(182, 20);
             this.stringTB.TabIndex = 4;
             this.stringTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.desdeTB_KeyPress);
             // 
             // mapViewB
             // 
-            this.mapViewB.Location = new System.Drawing.Point(646, 919);
-            this.mapViewB.Margin = new System.Windows.Forms.Padding(4);
+            this.mapViewB.Location = new System.Drawing.Point(323, 478);
+            this.mapViewB.Margin = new System.Windows.Forms.Padding(2);
             this.mapViewB.Name = "mapViewB";
-            this.mapViewB.Size = new System.Drawing.Size(280, 58);
+            this.mapViewB.Size = new System.Drawing.Size(140, 30);
             this.mapViewB.TabIndex = 6;
             this.mapViewB.Text = "Ver datos en el mapa";
             this.mapViewB.UseVisualStyleBackColor = true;
@@ -194,10 +194,10 @@ namespace gmap_military
             this.categoryCB.Items.AddRange(new object[] {
             "Zona",
             "DIM"});
-            this.categoryCB.Location = new System.Drawing.Point(599, 123);
-            this.categoryCB.Margin = new System.Windows.Forms.Padding(4);
+            this.categoryCB.Location = new System.Drawing.Point(300, 64);
+            this.categoryCB.Margin = new System.Windows.Forms.Padding(2);
             this.categoryCB.Name = "categoryCB";
-            this.categoryCB.Size = new System.Drawing.Size(195, 33);
+            this.categoryCB.Size = new System.Drawing.Size(100, 21);
             this.categoryCB.TabIndex = 11;
             // 
             // openFileDialog1
@@ -207,45 +207,47 @@ namespace gmap_military
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(448, 83);
+            this.label1.Location = new System.Drawing.Point(224, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 12;
             this.label1.Text = "Desde";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(454, 172);
+            this.label2.Location = new System.Drawing.Point(227, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 13;
             this.label2.Text = "Hasta";
             // 
             // desdeTB
             // 
             this.desdeTB.Enabled = false;
-            this.desdeTB.Location = new System.Drawing.Point(432, 123);
+            this.desdeTB.Location = new System.Drawing.Point(210, 63);
             this.desdeTB.MaxLength = 2;
             this.desdeTB.Name = "desdeTB";
-            this.desdeTB.Size = new System.Drawing.Size(100, 31);
+            this.desdeTB.Size = new System.Drawing.Size(52, 20);
             this.desdeTB.TabIndex = 14;
             // 
             // hastaTB
             // 
             this.hastaTB.Enabled = false;
-            this.hastaTB.Location = new System.Drawing.Point(432, 214);
+            this.hastaTB.Location = new System.Drawing.Point(210, 105);
             this.hastaTB.MaxLength = 2;
             this.hastaTB.Name = "hastaTB";
-            this.hastaTB.Size = new System.Drawing.Size(100, 31);
+            this.hastaTB.Size = new System.Drawing.Size(52, 20);
             this.hastaTB.TabIndex = 15;
             this.hastaTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hastaTB_KeyPress);
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1467, 990);
+            this.ClientSize = new System.Drawing.Size(899, 330);
             this.Controls.Add(this.hastaTB);
             this.Controls.Add(this.desdeTB);
             this.Controls.Add(this.label2);
@@ -257,7 +259,6 @@ namespace gmap_military
             this.Controls.Add(this.msgLabel);
             this.Controls.Add(this.filterB);
             this.Controls.Add(this.table);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainWindow";
             this.Text = "GMap Military V1";
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
@@ -278,14 +279,14 @@ namespace gmap_military
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox desdeTB;
+        private System.Windows.Forms.TextBox hastaTB;
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroZona;
         private System.Windows.Forms.DataGridViewTextBoxColumn zona;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn locationTC;
-        private System.Windows.Forms.TextBox desdeTB;
-        private System.Windows.Forms.TextBox hastaTB;
     }
 }
 

@@ -23,7 +23,7 @@ namespace gmap_military
             manager = new Manager();
             manager.loadData();
 
-            Console.WriteLine(manager.militaryBases.Count);
+         
 
             loadTable();
             
@@ -113,13 +113,29 @@ namespace gmap_military
 
         private void showMap(object sender, EventArgs e)
         {
-            controller.MapView mv = new controller.MapView();
+            controller.MapView mv = new controller.MapView(table.Rows);
             mv.ShowDialog();
         }
 
         private void filterB_Click(object sender, EventArgs e)
         {
 
+            table.Rows.Clear();
+            int index = 0;
+            for (int i = 0; i < manager.militaryBases.Count; i++)
+            {
+
+                index = table.Rows.Add();
+                MilitaryBase temp = manager.militaryBases.ElementAt(i);
+
+                table.Rows[index].Cells[0].Value = temp.zonaN;
+                table.Rows[index].Cells[1].Value = temp.zona;
+                table.Rows[index].Cells[2].Value = temp.address;
+                table.Rows[index].Cells[3].Value = temp.city;
+                table.Rows[index].Cells[4].Value = temp.phone;
+                table.Rows[index].Cells[5].Value = "(" + temp.location + ")";
+
+            }
         }
 
         private void desdeTB_KeyPress(object sender, KeyPressEventArgs e)
