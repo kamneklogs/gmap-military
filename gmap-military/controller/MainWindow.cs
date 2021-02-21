@@ -44,8 +44,8 @@ namespace gmap_military
                 table.Rows[index].Cells[2].Value = temp.address;
                 table.Rows[index].Cells[3].Value = temp.city;
                 table.Rows[index].Cells[4].Value = temp.phone;
-                table.Rows[index].Cells[5].Value = "(" + temp.location + ")";
-
+                table.Rows[index].Cells[5].Value = temp.location;
+                Console.WriteLine(temp.location);
             }
         }
 
@@ -133,7 +133,8 @@ namespace gmap_military
                 table.Rows[index].Cells[2].Value = temp.address;
                 table.Rows[index].Cells[3].Value = temp.city;
                 table.Rows[index].Cells[4].Value = temp.phone;
-                table.Rows[index].Cells[5].Value = "(" + temp.location + ")";
+                table.Rows[index].Cells[5].Value = temp.location;
+           
 
             }
         }

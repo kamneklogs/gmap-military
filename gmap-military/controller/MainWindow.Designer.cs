@@ -74,7 +74,7 @@ namespace gmap_military
             this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 82;
             this.table.RowTemplate.Height = 33;
-            this.table.Size = new System.Drawing.Size(888, 340);
+            this.table.Size = new System.Drawing.Size(888, 518);
             this.table.TabIndex = 0;
             this.table.TabStop = false;
             // 
@@ -247,7 +247,7 @@ namespace gmap_military
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 330);
+            this.ClientSize = new System.Drawing.Size(899, 508);
             this.Controls.Add(this.hastaTB);
             this.Controls.Add(this.desdeTB);
             this.Controls.Add(this.label2);
