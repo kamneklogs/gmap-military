@@ -21,8 +21,13 @@ namespace gmap_military
         {
             InitializeComponent();
             manager = new Manager();
-    
-            //manager.loadData();
+
+            int index = 0;
+            for (int i = 0; i < manager.militaryBases.Count; i++)
+            {
+
+            }
+            manager.loadData();
 
         }
 
@@ -76,6 +81,10 @@ namespace gmap_military
             }
         }
 
-        
+        private void showMap(object sender, EventArgs e)
+        {
+            controller.MapView mv = new controller.MapView();
+            mv.ShowDialog();
+        }
     }
 }
