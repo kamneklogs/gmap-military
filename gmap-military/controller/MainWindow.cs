@@ -86,7 +86,6 @@ namespace gmap_military
                 hastaTB.Enabled = false;
                 filterB.Enabled = false;
 
-
             } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
             {   //Ciudades
 
@@ -108,7 +107,6 @@ namespace gmap_military
                 hastaTB.Enabled = true;
                 categoryCB.Enabled = false;
                 stringTB.Enabled = false;
-
                 filterB.Enabled = true;
 
             }
@@ -124,23 +122,52 @@ namespace gmap_military
 
         private void filterB_Click(object sender, EventArgs e)
         {
-            
-            table.Rows.Clear();
-            int index = 0;
-            for (int i = 0; i < manager.militaryBases.Count; i++)
+            if (filterOptionsCB.SelectedItem.Equals("Cadena")){
+
+                if (stringTB.Text != "")
+                {
+                    manager.filterCity(stringTB.Text);
+                    table.Rows.Clear();
+                    int index = 0;
+                    for (int i = 0; i < manager.militaryBases.Count; i++)
+                    {
+
+                        index = table.Rows.Add();
+                        MilitaryBase temp = manager.militaryBases.ElementAt(i);
+
+                        table.Rows[index].Cells[0].Value = temp.zonaN;
+                        table.Rows[index].Cells[1].Value = temp.zona;
+                        table.Rows[index].Cells[2].Value = temp.address;
+                        table.Rows[index].Cells[3].Value = temp.city;
+                        table.Rows[index].Cells[4].Value = temp.phone;
+                        table.Rows[index].Cells[5].Value = temp.location;
+
+
+                    }
+                }
+            } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
             {
+                if (desdeTB.Text != "" && hastaTB.Text != "")
+                {
+                    manager.filterZN(Int32.Parse(desdeTB.Text), Int32.Parse(hastaTB.Text));
+                    table.Rows.Clear();
+                    int index = 0;
+                    for (int i = 0; i < manager.militaryBases.Count; i++)
+                    {
 
-                index = table.Rows.Add();
-                MilitaryBase temp = manager.militaryBases.ElementAt(i);
+                        index = table.Rows.Add();
+                        MilitaryBase temp = manager.militaryBases.ElementAt(i);
 
-                table.Rows[index].Cells[0].Value = temp.zonaN;
-                table.Rows[index].Cells[1].Value = temp.zona;
-                table.Rows[index].Cells[2].Value = temp.address;
-                table.Rows[index].Cells[3].Value = temp.city;
-                table.Rows[index].Cells[4].Value = temp.phone;
-                table.Rows[index].Cells[5].Value = temp.location;
-           
+                        table.Rows[index].Cells[0].Value = temp.zonaN;
+                        table.Rows[index].Cells[1].Value = temp.zona;
+                        table.Rows[index].Cells[2].Value = temp.address;
+                        table.Rows[index].Cells[3].Value = temp.city;
+                        table.Rows[index].Cells[4].Value = temp.phone;
+                        table.Rows[index].Cells[5].Value = temp.location;
 
+
+                    }
+                }
             }
         }
 
@@ -175,6 +202,55 @@ namespace gmap_military
             else
             {
                 e.Handled = true;
+            }
+
+
+        }
+
+        private void categoryCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (categoryCB.SelectedItem.Equals("Zona"))
+            {
+                manager.filterZona("ZONA");
+                table.Rows.Clear();
+                int index = 0;
+                for (int i = 0; i < manager.militaryBases.Count; i++)
+                {
+
+                    index = table.Rows.Add();
+                    MilitaryBase temp = manager.militaryBases.ElementAt(i);
+
+                    table.Rows[index].Cells[0].Value = temp.zonaN;
+                    table.Rows[index].Cells[1].Value = temp.zona;
+                    table.Rows[index].Cells[2].Value = temp.address;
+                    table.Rows[index].Cells[3].Value = temp.city;
+                    table.Rows[index].Cells[4].Value = temp.phone;
+                    table.Rows[index].Cells[5].Value = temp.location;
+
+
+                }
+            }
+            else
+            {
+                manager.filterZona("DIM");
+                table.Rows.Clear();
+                int index = 0;
+                for (int i = 0; i < manager.militaryBases.Count; i++)
+                {
+
+                    index = table.Rows.Add();
+                    MilitaryBase temp = manager.militaryBases.ElementAt(i);
+
+                    table.Rows[index].Cells[0].Value = temp.zonaN;
+                    table.Rows[index].Cells[1].Value = temp.zona;
+                    table.Rows[index].Cells[2].Value = temp.address;
+                    table.Rows[index].Cells[3].Value = temp.city;
+                    table.Rows[index].Cells[4].Value = temp.phone;
+                    table.Rows[index].Cells[5].Value = temp.location;
+
+
+                }
             }
 
 

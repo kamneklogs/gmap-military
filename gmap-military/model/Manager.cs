@@ -107,6 +107,7 @@ namespace gmap_military.model
     {     
             try
             {
+                militaryBases.Clear();
                 var sr = new StreamReader(path);
 
                 string s = sr.ReadLine();
@@ -147,6 +148,7 @@ namespace gmap_military.model
     {
         try
         {
+            militaryBases.Clear();
             var sr = new StreamReader(path);
 
             string s = sr.ReadLine();
@@ -165,7 +167,7 @@ namespace gmap_military.model
                 string location = temp[5] +" "+ temp[6];
 
 
-                if (city.Equals(cityF))
+                if (city.Equals(cityF, StringComparison.OrdinalIgnoreCase))
                 {
                     militaryBases.Add(new MilitaryBase(zonaN, zona, address, city, phone, location));
                 }
@@ -185,6 +187,7 @@ namespace gmap_military.model
         {
             try
             {
+                militaryBases.Clear();
                 var sr = new StreamReader(path);
 
                 string s = sr.ReadLine();
