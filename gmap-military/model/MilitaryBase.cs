@@ -13,9 +13,14 @@ namespace gmap_military.model
         public string city { get; set; }
         public string phone { get; set; }
         public string location { get; set; }
+        public string zona { get; set; }
 
-        public MilitaryBase(string address, string city, string phone, string location)
+        public string zonaN { get; set; }
+
+        public MilitaryBase(string zonaN, string zona, string address, string city, string phone, string location)
         {
+            this.zonaN = zonaN;
+            this.zona = zona;
             this.address = address;
             this.city = city;
             this.phone = phone;

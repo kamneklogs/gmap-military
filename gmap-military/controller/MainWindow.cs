@@ -32,30 +32,40 @@ namespace gmap_military
                 index = table.Rows.Add();
                 MilitaryBase temp = manager.militaryBases.ElementAt(i);
                 //   dataTownGridRecord.Rows[index].Cells[0].Value = temp[0];
-                table.Rows[index].Cells[0].Value = temp.address;
-                table.Rows[index].Cells[1].Value = temp.city;
-                table.Rows[index].Cells[2].Value = temp.phone;
-                table.Rows[index].Cells[3].Value = "("+temp.location + ")";
+                table.Rows[index].Cells[0].Value = temp.zonaN;
+                table.Rows[index].Cells[1].Value = temp.zona;
+                table.Rows[index].Cells[2].Value = temp.address;
+                table.Rows[index].Cells[3].Value = temp.city;
+                table.Rows[index].Cells[4].Value = temp.phone;
+                table.Rows[index].Cells[5].Value = "("+temp.location + ")";
 
             }
-
+            //configurateCategoryCB();
         }
 
         public void configurateCategoryCB()
         {
             ArrayList msg = manager.configurateCategory();
-            string[] agregados = new string[1000];
+            string[] agregados = new string[50];
+            Boolean yaEsta = false;
             for (int i = 0; i < msg.Count; i++)
             {
-                 
-                for(int j = 0; j < agregados.Length; i++)
+
+                for (int j = 0; j < agregados.Length; i++)
                 {
-                   
+                    if (agregados[j].Equals(msg.IndexOf(i)))
+                    {
+                        yaEsta = true;
+                    }
                 }
+                    if(yaEsta != true)
+                    {
+                        agregados[i] = (string)msg[i];
+                        categoryCB.Items.Add(agregados[i]);
+                }
+                
             }
             
-            categoryCB.Items.Add("");
-
         }
 
         private void filterOptionsCB_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,35 +76,61 @@ namespace gmap_military
                 msgLabel.Text = "Seleccione el tipo de zona por el que desea filtrar los datos";
                 categoryCB.Enabled = true;
                 stringTB.Enabled = false;
-                fromUD.Enabled = true;
-                toUD.Enabled = true;
+                desdeTB.Enabled = false;
+                hastaTB.Enabled = false;
+                filterB.Enabled = false;
 
             } else if (filterOptionsCB.SelectedItem.Equals("Cadena"))
             {   //Ciudades
 
                 msgLabel.Text = "Escriba la ciudad por la que desea filtrar los datos";
                 stringTB.Enabled = true;
-                categoryCB.Enabled = true;
-                fromUD.Enabled = true;
-                toUD.Enabled = true;
+                categoryCB.Enabled = false;
+                desdeTB.Enabled = false;
+                hastaTB.Enabled = false;
 
             } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
             {
                 //Número zona
 
                 msgLabel.Text = "Escriba el rango de las zonas por las que desea filtrar los datos";
-                fromUD.Enabled = true;
-                toUD.Enabled = true;
-                categoryCB.Enabled = true;
+                desdeTB.Enabled = true;
+                hastaTB.Enabled = true;
+                categoryCB.Enabled = false;
                 stringTB.Enabled = false;
+
 
             }
         }
+
+
 
         private void showMap(object sender, EventArgs e)
         {
             controller.MapView mv = new controller.MapView();
             mv.ShowDialog();
+        }
+
+        private void filterB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void desdeTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            } else
+                if(Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }
