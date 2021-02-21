@@ -20,7 +20,7 @@ Demo video HERE
 - Main interface 
 <img src="gmap-military/img/P1.png" width = 600>
 - Map interface
-<img src="gmap-military/img/P1.png" width = 600>
+<img src="gmap-military/img/P2.png" width = 600>
 - Graph interface
 
 # Authors 
