@@ -1,4 +1,5 @@
 ﻿using gmap_military.model;
+using gmap_military.controller;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -253,6 +254,12 @@ namespace gmap_military
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            statistics statistics = new statistics(table.Rows);
+            statistics.ShowDialog();
         }
     }
 }

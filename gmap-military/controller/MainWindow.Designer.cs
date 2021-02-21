@@ -76,7 +76,7 @@ namespace gmap_military
             this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 82;
             this.table.RowTemplate.Height = 33;
-            this.table.Size = new System.Drawing.Size(1329, 699);
+            this.table.Size = new System.Drawing.Size(1363, 912);
             this.table.TabIndex = 0;
             this.table.TabStop = false;
             // 
@@ -260,13 +260,14 @@ namespace gmap_military
             this.button1.TabIndex = 16;
             this.button1.Text = "Ver gráficos";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1444, 881);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.hastaTB);
             this.Controls.Add(this.desdeTB);

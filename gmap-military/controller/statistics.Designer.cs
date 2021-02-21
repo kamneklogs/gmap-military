@@ -60,7 +60,7 @@ namespace gmap_military
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.barsStat.Series.Add(series1);
-            this.barsStat.Size = new System.Drawing.Size(251, 213);
+            this.barsStat.Size = new System.Drawing.Size(329, 285);
             this.barsStat.TabIndex = 0;
             this.barsStat.Text = "chart1";
             // 
@@ -71,7 +71,7 @@ namespace gmap_military
             this.pieStat.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.pieStat.Legends.Add(legend2);
-            this.pieStat.Location = new System.Drawing.Point(278, 42);
+            this.pieStat.Location = new System.Drawing.Point(366, 42);
             this.pieStat.Name = "pieStat";
             this.pieStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series2.ChartArea = "ChartArea1";
@@ -79,7 +79,7 @@ namespace gmap_military
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.pieStat.Series.Add(series2);
-            this.pieStat.Size = new System.Drawing.Size(228, 213);
+            this.pieStat.Size = new System.Drawing.Size(334, 285);
             this.pieStat.TabIndex = 1;
             this.pieStat.Text = "chart2";
             // 
@@ -90,7 +90,7 @@ namespace gmap_military
             this.donutStat.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.donutStat.Legends.Add(legend3);
-            this.donutStat.Location = new System.Drawing.Point(512, 42);
+            this.donutStat.Location = new System.Drawing.Point(722, 42);
             this.donutStat.Name = "donutStat";
             this.donutStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series3.ChartArea = "ChartArea1";
@@ -98,7 +98,7 @@ namespace gmap_military
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.donutStat.Series.Add(series3);
-            this.donutStat.Size = new System.Drawing.Size(236, 213);
+            this.donutStat.Size = new System.Drawing.Size(307, 285);
             this.donutStat.TabIndex = 2;
             this.donutStat.Text = "chart3";
             // 
@@ -106,7 +106,7 @@ namespace gmap_military
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1075, 540);
             this.Controls.Add(this.donutStat);
             this.Controls.Add(this.pieStat);
             this.Controls.Add(this.barsStat);

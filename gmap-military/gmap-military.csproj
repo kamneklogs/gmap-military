@@ -65,11 +65,11 @@
     <Compile Include="controller\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="controller\StatForm.cs">
+    <Compile Include="controller\statistics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controller\StatForm.Designer.cs">
-      <DependentUpon>StatForm.cs</DependentUpon>
+    <Compile Include="controller\statistics.Designer.cs">
+      <DependentUpon>statistics.cs</DependentUpon>
     </Compile>
     <Compile Include="model\Manager.cs" />
     <Compile Include="model\MilitaryBase.cs" />
@@ -81,8 +81,8 @@
     <EmbeddedResource Include="controller\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controller\StatForm.resx">
-      <DependentUpon>StatForm.cs</DependentUpon>
+    <EmbeddedResource Include="controller\statistics.resx">
+      <DependentUpon>statistics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
