@@ -78,6 +78,15 @@ namespace gmap_military
                 }
             }
 
+            for (int i = 0; i < proportionCities.Length; i++)
+            {
+                pieStat.Series["citiesSerie"].Points.AddXY(cities[i], proportionCities[i] / total);
+            }
+            for (int i = 0; i < proportionZones.Length; i++)
+            {
+                donutStat.Series["zonesSerie"].Points.AddXY(zones[i], proportionZones[i] / total);
+                barsStat.Series["zonesSerie"].Points.AddXY(zones[i], proportionZones[i] / total);
+            }
         }
 
     }

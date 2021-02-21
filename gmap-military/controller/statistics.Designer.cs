@@ -53,14 +53,14 @@ namespace gmap_military
             this.barsStat.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.barsStat.Legends.Add(legend1);
-            this.barsStat.Location = new System.Drawing.Point(21, 42);
+            this.barsStat.Location = new System.Drawing.Point(805, 271);
             this.barsStat.Name = "barsStat";
             this.barsStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "zonesSerie";
             this.barsStat.Series.Add(series1);
-            this.barsStat.Size = new System.Drawing.Size(329, 285);
+            this.barsStat.Size = new System.Drawing.Size(553, 466);
             this.barsStat.TabIndex = 0;
             this.barsStat.Text = "chart1";
             // 
@@ -71,16 +71,17 @@ namespace gmap_military
             this.pieStat.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.pieStat.Legends.Add(legend2);
-            this.pieStat.Location = new System.Drawing.Point(366, 42);
+            this.pieStat.Location = new System.Drawing.Point(12, 12);
             this.pieStat.Name = "pieStat";
-            this.pieStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.pieStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
-            series2.Name = "Series1";
+            series2.MarkerSize = 0;
+            series2.Name = "citiesSerie";
             this.pieStat.Series.Add(series2);
-            this.pieStat.Size = new System.Drawing.Size(334, 285);
-            this.pieStat.TabIndex = 1;
+            this.pieStat.Size = new System.Drawing.Size(774, 725);
+            this.pieStat.TabIndex = 0;
             this.pieStat.Text = "chart2";
             // 
             // donutStat
@@ -90,15 +91,15 @@ namespace gmap_military
             this.donutStat.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.donutStat.Legends.Add(legend3);
-            this.donutStat.Location = new System.Drawing.Point(722, 42);
+            this.donutStat.Location = new System.Drawing.Point(805, 12);
             this.donutStat.Name = "donutStat";
-            this.donutStat.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
             series3.Legend = "Legend1";
-            series3.Name = "Series1";
+            series3.MarkerSize = 0;
+            series3.Name = "zonesSerie";
             this.donutStat.Series.Add(series3);
-            this.donutStat.Size = new System.Drawing.Size(307, 285);
+            this.donutStat.Size = new System.Drawing.Size(553, 240);
             this.donutStat.TabIndex = 2;
             this.donutStat.Text = "chart3";
             // 
@@ -106,7 +107,7 @@ namespace gmap_military
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 540);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.donutStat);
             this.Controls.Add(this.pieStat);
             this.Controls.Add(this.barsStat);

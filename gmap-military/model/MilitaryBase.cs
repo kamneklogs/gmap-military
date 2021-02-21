@@ -13,6 +13,7 @@ namespace gmap_military.model
         public string city { get; set; }
         public string phone { get; set; }
         public string location { get; set; }
+
         public string zona { get; set; }
 
         public string zonaN { get; set; }
