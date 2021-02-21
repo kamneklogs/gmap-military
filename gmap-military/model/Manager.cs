@@ -122,7 +122,7 @@ namespace gmap_military.model
                     string address = temp[2];
                     string city = temp[3];
                     string phone = temp[4];
-                    string location = temp[5].Substring(1, temp[5].Length - 1) + temp[6].Substring(1, temp[6].Length - 1);
+                    string location = temp[5] + " " + temp[6];
 
 
                     if (Int32.Parse(zonaN) >= desde && Int32.Parse(zonaN) <= hasta)
@@ -200,7 +200,7 @@ namespace gmap_military.model
                     string address = temp[2];
                     string city = temp[3];
                     string phone = temp[4];
-                    string location = temp[5].Substring(1, temp[5].Length - 1) + temp[6].Substring(1, temp[6].Length - 1);
+                    string location = temp[5] + " " + temp[6];
 
 
                     if (zona.Contains(zonaF))

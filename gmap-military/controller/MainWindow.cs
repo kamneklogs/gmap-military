@@ -94,8 +94,12 @@ namespace gmap_military
                 categoryCB.Enabled = false;
                 desdeTB.Enabled = false;
                 hastaTB.Enabled = false;
+                filterB.Enabled = false;
+                filterB.Enabled = true;
 
-            } else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
+
+            }
+            else if (filterOptionsCB.SelectedItem.Equals("Numérico"))
             {
                 //Número zona
 
@@ -105,6 +109,7 @@ namespace gmap_military
                 categoryCB.Enabled = false;
                 stringTB.Enabled = false;
 
+                filterB.Enabled = true;
 
             }
         }
@@ -119,7 +124,7 @@ namespace gmap_military
 
         private void filterB_Click(object sender, EventArgs e)
         {
-
+            
             table.Rows.Clear();
             int index = 0;
             for (int i = 0; i < manager.militaryBases.Count; i++)

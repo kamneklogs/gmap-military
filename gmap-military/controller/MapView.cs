@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -66,9 +67,9 @@ namespace gmap_military.controller
                 string[] temp = item.Split(';');
                 string[] loc = temp[1].Split(' ');
 
-                double lat = double.Parse(loc[0]); //Si te pc esta en español, usa comas con los decimales
+                double lat = double.Parse(loc[0], CultureInfo.InvariantCulture); //Si te pc esta en español, usa comas con los decimales
       
-                double lon = double.Parse(loc[2]);
+                double lon = double.Parse(loc[2], CultureInfo.InvariantCulture);
                 
 
                 PointLatLng p = new PointLatLng(lat, lon);
