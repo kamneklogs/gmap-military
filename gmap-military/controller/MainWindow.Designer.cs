@@ -60,6 +60,7 @@ namespace gmap_military
             this.table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -211,7 +212,6 @@ namespace gmap_military
             this.NumeroZona.MinimumWidth = 10;
             this.NumeroZona.Name = "NumeroZona";
             this.NumeroZona.ReadOnly = true;
-            this.NumeroZona.Width = 200;
             // 
             // zona
             // 
@@ -220,7 +220,6 @@ namespace gmap_military
             this.zona.Name = "zona";
             this.zona.ReadOnly = true;
             this.zona.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.zona.Width = 200;
             // 
             // addressTC
             // 
@@ -264,8 +263,9 @@ namespace gmap_military
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1528, 1034);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.hastaTB);
@@ -281,7 +281,9 @@ namespace gmap_military
             this.Controls.Add(this.table);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GMap Military V1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.table)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
