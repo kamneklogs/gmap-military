@@ -25,6 +25,13 @@ namespace gmap_military
 
             Console.WriteLine(manager.militaryBases.Count);
 
+            loadTable();
+            
+            //configurateCategoryCB();
+        }
+
+        public void loadTable()
+        {
             int index = 0;
             for (int i = 0; i < manager.militaryBases.Count; i++)
             {
@@ -37,10 +44,9 @@ namespace gmap_military
                 table.Rows[index].Cells[2].Value = temp.address;
                 table.Rows[index].Cells[3].Value = temp.city;
                 table.Rows[index].Cells[4].Value = temp.phone;
-                table.Rows[index].Cells[5].Value = "("+temp.location + ")";
+                table.Rows[index].Cells[5].Value = "(" + temp.location + ")";
 
             }
-            //configurateCategoryCB();
         }
 
         public void configurateCategoryCB()
@@ -130,6 +136,25 @@ namespace gmap_military
             {
                 e.Handled = true;
             }
+
+        }
+
+        private void hastaTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+                if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+
 
         }
     }

@@ -145,7 +145,7 @@ namespace gmap_military
             // msgLabel
             // 
             this.msgLabel.AutoSize = true;
-            this.msgLabel.Location = new System.Drawing.Point(478, 22);
+            this.msgLabel.Location = new System.Drawing.Point(471, 22);
             this.msgLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.msgLabel.Name = "msgLabel";
             this.msgLabel.Size = new System.Drawing.Size(388, 25);
@@ -224,6 +224,7 @@ namespace gmap_military
             // 
             // desdeTB
             // 
+            this.desdeTB.Enabled = false;
             this.desdeTB.Location = new System.Drawing.Point(432, 123);
             this.desdeTB.MaxLength = 2;
             this.desdeTB.Name = "desdeTB";
@@ -232,11 +233,13 @@ namespace gmap_military
             // 
             // hastaTB
             // 
+            this.hastaTB.Enabled = false;
             this.hastaTB.Location = new System.Drawing.Point(432, 214);
             this.hastaTB.MaxLength = 2;
             this.hastaTB.Name = "hastaTB";
             this.hastaTB.Size = new System.Drawing.Size(100, 31);
             this.hastaTB.TabIndex = 15;
+            this.hastaTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.hastaTB_KeyPress);
             // 
             // MainWindow
             // 
