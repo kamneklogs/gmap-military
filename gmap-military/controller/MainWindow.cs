@@ -21,7 +21,12 @@ namespace gmap_military
         {
             InitializeComponent();
             manager = new Manager();
-    
+
+            int index = 0;
+            for (int i = 0; i < manager.militaryBases.Count; i++)
+            {
+
+            }
             manager.loadData();
 
         }

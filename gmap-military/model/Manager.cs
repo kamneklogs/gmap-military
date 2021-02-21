@@ -16,7 +16,7 @@ namespace gmap_military.model
         private string path;
         private System.Data.DataTable table;
 
-        private List<MilitaryBase> militaryBases;
+        public List<MilitaryBase> militaryBases {  get; }
 
         public Manager()
         {
