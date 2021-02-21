@@ -81,6 +81,10 @@ namespace gmap_military
             }
         }
 
-        
+        private void showMap(object sender, EventArgs e)
+        {
+            controller.MapView mv = new controller.MapView();
+            mv.ShowDialog();
+        }
     }
 }

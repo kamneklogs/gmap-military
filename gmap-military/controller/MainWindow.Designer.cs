@@ -48,6 +48,14 @@ namespace gmap_military
             // 
             // table
             // 
+            this.table.AllowUserToAddRows = false;
+            this.table.AllowUserToDeleteRows = false;
+            this.table.AllowUserToResizeColumns = false;
+            this.table.AllowUserToResizeRows = false;
+            this.table.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.table.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.addressTC,
@@ -55,18 +63,20 @@ namespace gmap_military
             this.phoneTC,
             this.locationTC});
             this.table.Location = new System.Drawing.Point(18, 95);
-            this.table.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.table.Margin = new System.Windows.Forms.Padding(2);
             this.table.Name = "table";
+            this.table.ReadOnly = true;
             this.table.RowHeadersWidth = 82;
             this.table.RowTemplate.Height = 33;
             this.table.Size = new System.Drawing.Size(828, 307);
             this.table.TabIndex = 0;
+            this.table.TabStop = false;
             // 
             // filterB
             // 
             this.filterB.Enabled = false;
             this.filterB.Location = new System.Drawing.Point(788, 43);
-            this.filterB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.filterB.Margin = new System.Windows.Forms.Padding(2);
             this.filterB.Name = "filterB";
             this.filterB.Size = new System.Drawing.Size(58, 27);
             this.filterB.TabIndex = 1;
@@ -91,7 +101,7 @@ namespace gmap_military
             "Cadena",
             "Numérico"});
             this.filterOptionsCB.Location = new System.Drawing.Point(23, 49);
-            this.filterOptionsCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.filterOptionsCB.Margin = new System.Windows.Forms.Padding(2);
             this.filterOptionsCB.Name = "filterOptionsCB";
             this.filterOptionsCB.Size = new System.Drawing.Size(161, 21);
             this.filterOptionsCB.TabIndex = 3;
@@ -101,7 +111,7 @@ namespace gmap_military
             // 
             this.stringTB.Enabled = false;
             this.stringTB.Location = new System.Drawing.Point(466, 49);
-            this.stringTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stringTB.Margin = new System.Windows.Forms.Padding(2);
             this.stringTB.Name = "stringTB";
             this.stringTB.Size = new System.Drawing.Size(300, 20);
             this.stringTB.TabIndex = 4;
@@ -109,18 +119,19 @@ namespace gmap_military
             // mapViewB
             // 
             this.mapViewB.Location = new System.Drawing.Point(359, 414);
-            this.mapViewB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mapViewB.Margin = new System.Windows.Forms.Padding(2);
             this.mapViewB.Name = "mapViewB";
             this.mapViewB.Size = new System.Drawing.Size(140, 30);
             this.mapViewB.TabIndex = 6;
             this.mapViewB.Text = "Ver datos en el mapa";
             this.mapViewB.UseVisualStyleBackColor = true;
+            this.mapViewB.Click += new System.EventHandler(this.showMap);
             // 
             // fromUD
             // 
             this.fromUD.Enabled = false;
             this.fromUD.Location = new System.Drawing.Point(216, 40);
-            this.fromUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fromUD.Margin = new System.Windows.Forms.Padding(2);
             this.fromUD.Name = "fromUD";
             this.fromUD.Size = new System.Drawing.Size(60, 20);
             this.fromUD.TabIndex = 9;
@@ -130,7 +141,7 @@ namespace gmap_military
             // 
             this.toUD.Enabled = false;
             this.toUD.Location = new System.Drawing.Point(216, 67);
-            this.toUD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.toUD.Margin = new System.Windows.Forms.Padding(2);
             this.toUD.Name = "toUD";
             this.toUD.Size = new System.Drawing.Size(60, 20);
             this.toUD.TabIndex = 10;
@@ -141,7 +152,7 @@ namespace gmap_military
             this.categoryCB.Enabled = false;
             this.categoryCB.FormattingEnabled = true;
             this.categoryCB.Location = new System.Drawing.Point(298, 48);
-            this.categoryCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.categoryCB.Margin = new System.Windows.Forms.Padding(2);
             this.categoryCB.Name = "categoryCB";
             this.categoryCB.Size = new System.Drawing.Size(151, 21);
             this.categoryCB.TabIndex = 11;
@@ -152,23 +163,35 @@ namespace gmap_military
             // 
             // addressTC
             // 
+            this.addressTC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.addressTC.HeaderText = "Direccion";
             this.addressTC.Name = "addressTC";
+            this.addressTC.ReadOnly = true;
+            this.addressTC.Width = 77;
             // 
             // cityTC
             // 
+            this.cityTC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.cityTC.HeaderText = "Ciudad";
             this.cityTC.Name = "cityTC";
+            this.cityTC.ReadOnly = true;
+            this.cityTC.Width = 65;
             // 
             // phoneTC
             // 
+            this.phoneTC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.phoneTC.HeaderText = "Teléfono";
             this.phoneTC.Name = "phoneTC";
+            this.phoneTC.ReadOnly = true;
+            this.phoneTC.Width = 74;
             // 
             // locationTC
             // 
+            this.locationTC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.locationTC.HeaderText = "Ubicación";
             this.locationTC.Name = "locationTC";
+            this.locationTC.ReadOnly = true;
+            this.locationTC.Width = 80;
             // 
             // MainWindow
             // 
