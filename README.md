@@ -25,7 +25,7 @@ Demo video HERE
 
 # Authors 
 
-- Camilo Cordoba
-- Andrea Nuñez
-- Danna García
+- [Camilo Cordoba](https://github.com/kamneklogs)
+- [Andrea Nuñez](https://github.com/andreanr19)
+- [Danna García](https://github.com/Dannasofiagarcia)
 
