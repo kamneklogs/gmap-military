@@ -67,25 +67,25 @@ namespace gmap_military.controller
             // 
             // filterValue
             // 
-            this.filterValue.Location = new System.Drawing.Point(194, 512);
+            this.filterValue.Location = new System.Drawing.Point(131, 511);
             this.filterValue.Name = "filterValue";
-            this.filterValue.Size = new System.Drawing.Size(100, 20);
+            this.filterValue.Size = new System.Drawing.Size(100, 31);
             this.filterValue.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(191, 479);
+            this.label1.Location = new System.Drawing.Point(52, 464);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 13);
+            this.label1.Size = new System.Drawing.Size(283, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Filtrar por zona militar (1-15)";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(354, 495);
+            this.button1.Location = new System.Drawing.Point(366, 499);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(88, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Filtrar";
             this.button1.UseVisualStyleBackColor = true;
