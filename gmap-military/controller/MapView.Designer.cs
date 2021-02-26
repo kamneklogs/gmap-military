@@ -60,14 +60,14 @@ namespace gmap_military.controller
             this.mainMap.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.mainMap.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.mainMap.ShowTileGridLines = false;
-            this.mainMap.Size = new System.Drawing.Size(1262, 378);
+            this.mainMap.Size = new System.Drawing.Size(1469, 704);
             this.mainMap.TabIndex = 0;
             this.mainMap.Zoom = 5D;
             this.mainMap.Load += new System.EventHandler(this.gMapLoad);
             // 
             // filterValue
             // 
-            this.filterValue.Location = new System.Drawing.Point(131, 511);
+            this.filterValue.Location = new System.Drawing.Point(411, 735);
             this.filterValue.Name = "filterValue";
             this.filterValue.Size = new System.Drawing.Size(100, 31);
             this.filterValue.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace gmap_military.controller
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 464);
+            this.label1.Location = new System.Drawing.Point(27, 741);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 25);
             this.label1.TabIndex = 2;
@@ -83,7 +83,7 @@ namespace gmap_military.controller
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(366, 499);
+            this.button1.Location = new System.Drawing.Point(576, 729);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 43);
             this.button1.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace gmap_military.controller
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1370, 616);
+            this.ClientSize = new System.Drawing.Size(1490, 790);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.filterValue);
