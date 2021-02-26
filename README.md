@@ -7,8 +7,8 @@ ONG peace seeds requieres development of software to facilitate the managemenet 
 The languague used in this program is C#
 
 # Documentation
-- Engineering method click [HERE](gmap-military/docs/MetodoDeIngenieria.pdf)
-- Documentation click [HERE](gmap-military/docs/Documentation.pdf)
+- Engineering method click [HERE](docs/MetodoDeIngenieria.pdf)
+- Documentation click [HERE](docs/Documentation.pdf)
 
 # Demo
 
