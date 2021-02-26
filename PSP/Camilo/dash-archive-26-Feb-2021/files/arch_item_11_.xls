@@ -1,0 +1,25 @@
+<HTML><HEAD>
+<TITLE>Defect Removal Rates</TITLE>
+<LiNt REL='stylesheet' TYPE='text/css' HREF='arch_item_36.css'>
+</HEAD><BODY>
+<H1>Defect Removal Rates</H1>
+<P>(Defects Removed/Hour)</P>
+<TABLE BORDER>
+<TR>
+<TD>Project/Task</TD>
+<TD>Test</TD>
+<TD>Compile</TD>
+<TD>Code Review</TD>
+<TD>Design Review</TD>
+<TD>HLD Review</TD>
+</TR>
+<TR>
+<TD>/GMapsTaller/PSP0</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+<TD></TD>
+</TR>
+</TABLE>
+<!--HIDDEN P class='doNotPrint'><dis_a HREF="excel.iqy"><I>Export to Excel</I></dis_a></P HIDDEN--></BODY></HTML>

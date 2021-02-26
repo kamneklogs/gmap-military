@@ -1,0 +1,20 @@
+<HTML><HEAD>
+<TITLE>LOC Reviewed per Hour</TITLE>
+<LiNt REL='stylesheet' TYPE='text/css' HREF='arch_item_36.css'>
+</HEAD><BODY>
+<H1>LOC Reviewed per Hour</H1>
+<TABLE BORDER>
+<TR>
+<TD>Project/Task</TD>
+<TD>Total</TD>
+<TD>Design Review</TD>
+<TD>Code Review</TD>
+</TR>
+<TR>
+<TD>/GMapsTaller/PSP0</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+</TR>
+</TABLE>
+<!--HIDDEN P class='doNotPrint'><dis_a HREF="excel.iqy"><I>Export to Excel</I></dis_a></P HIDDEN--></BODY></HTML>

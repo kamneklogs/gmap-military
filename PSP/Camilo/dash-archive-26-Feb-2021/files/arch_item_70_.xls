@@ -1,0 +1,18 @@
+<HTML><HEAD>
+<TITLE>Test Defects vs. Yield</TITLE>
+<LiNt REL='stylesheet' TYPE='text/css' HREF='arch_item_36.css'>
+</HEAD><BODY>
+<H1>Test Defects vs. Yield</H1>
+<TABLE BORDER>
+<TR>
+<TD>Project/Task</TD>
+<TD>Yield %</TD>
+<TD>Test Defects/KLOC</TD>
+</TR>
+<TR>
+<TD>/GMapsTaller/PSP0</TD>
+<TD>#DIV/0!</TD>
+<TD>#DIV/0!</TD>
+</TR>
+</TABLE>
+<!--HIDDEN P class='doNotPrint'><dis_a HREF="excel.iqy"><I>Export to Excel</I></dis_a></P HIDDEN--></BODY></HTML>
