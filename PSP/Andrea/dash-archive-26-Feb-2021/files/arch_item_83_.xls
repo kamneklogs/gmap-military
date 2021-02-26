@@ -1,0 +1,18 @@
+<HTML><HEAD>
+<TITLE>Taza de Revisión Combinada vs. Yield de Proceso</TITLE>
+<LiNt REL='stylesheet' TYPE='text/css' HREF='arch_item_36.css'>
+</HEAD><BODY>
+<H1>Taza de Revisión Combinada vs. Yield de Proceso</H1>
+<TABLE BORDER>
+<TR>
+<TD>Proyecto/Tarea</TD>
+<TD>Revisión Combinada LOC/Hr</TD>
+<TD>% Yield</TD>
+</TR>
+<TR>
+<TD>Prototypical PSP Data</TD>
+<TD>100</TD>
+<TD></TD>
+</TR>
+</TABLE>
+<!--HIDDEN P class='doNotPrint'><dis_a HREF="excel.iqy"><I>Exportar a Excel</I></dis_a></P HIDDEN--></BODY></HTML>
