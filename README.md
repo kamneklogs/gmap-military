@@ -22,7 +22,7 @@ Demo video HERE
 - Graph interface
 <img src="gmap-military/img/P3.png" width = 600>
 - Military zones
-<img src="gmap-military/img/zones.png" width = 600>
+<img src="gmap-military/img/zones.jpg" width = 600>
 
 # Authors 
 
